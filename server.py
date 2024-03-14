@@ -31,3 +31,11 @@ def bind_socket():
         print("Socket Binding error" + str(err) + "\n" + "Retrying:")
         # Recusively try binding again
         bind_socket()
+
+# Establish connection with a client (socket must be listening)
+    
+def socket_accept():
+    connection , address = s.accept()
+    print("Connection has been established: " + " IP " + address[0] + " Port " + str(address[1]))
+    
+    connection.close()
